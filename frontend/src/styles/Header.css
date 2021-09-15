@@ -1,0 +1,19 @@
+.headerContainer{
+  width:100%;
+  height:50px;
+  border:1px solid lightgrey;
+}
+
+.fas.fa-home{
+  font-size:22px;
+  color:grey;
+  text-align: center;
+  padding: 15px;
+  margin-left:47.5%;
+}
+
+.fas.fa-home:hover{
+  color:black;
+  cursor:pointer;
+  transform: scale(1.1);
+}

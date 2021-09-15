@@ -1,0 +1,8 @@
+.removeLink{
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.575);
+}
+
+.removeLink:hover{
+ color:black;
+}

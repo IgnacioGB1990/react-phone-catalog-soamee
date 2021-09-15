@@ -1,0 +1,10 @@
+.phoneScreenContainer{
+  text-align: center;
+  margin-top:3%;
+}
+
+.phoneScreenContainer > div{
+  font-size:18px;
+  color:rgba(0, 0, 0, 0.37);
+  font-weight: bold;
+}
