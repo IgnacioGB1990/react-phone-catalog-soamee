@@ -1,7 +1,7 @@
 import express from "express"
 import dotenv from "dotenv"
 import connectDB from "./config/db.js"
-import phones from "./data/phones.js"
+import phoneRoutes from "./routes/phoneRoutes.js"
 
 dotenv.config()
 
@@ -13,15 +13,8 @@ app.get("/", (req, res) => {
   res.send("API is running...")
 })
 
-app.get("/api/phones", (req, res) => {
-  res.json(phones)
-})
+app.use("/api/phones", phoneRoutes)
 
-app.get("/api/phones/:id", (req, res) => {
-
-  const phone = phones.find((p) => p._id === req.params.id)
-  res.json(phone)
-})
 
 
 const PORT = process.env.PORT || 7000
