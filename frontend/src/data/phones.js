@@ -6,7 +6,7 @@ const phones = [
     description: "Greates iphone ever",
     color: "Grey",
     price: 192,
-    imageFileName: "",
+    imageFileName: "/images/iphone.png",
     screen: "4,7 inch IPS",
     processor: "A10 FUSION ",
     ram: 2

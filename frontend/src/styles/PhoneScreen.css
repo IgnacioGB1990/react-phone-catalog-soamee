@@ -1,10 +1,19 @@
 .phoneScreenContainer{
   text-align: center;
   margin-top:3%;
+  width:70%;
+  margin:auto;
 }
 
 .phoneScreenContainer > div{
-  font-size:18px;
+  font-size:12px;
   color:black;
   font-weight: bold;
+}
+
+
+.phoneScreenDetailContainer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

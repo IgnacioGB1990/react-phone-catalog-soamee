@@ -8,6 +8,11 @@ const PhoneScreen = ({ match }) => {
 
   return (
     <div className="phoneScreenContainer">
+
+      <img src={phone.imageFileName} alt={phone.name} />
+
+
+
       <div >Name:</div>
       <p>{phone.name}</p>
       <div>Manufacturer:</div>
@@ -25,6 +30,8 @@ const PhoneScreen = ({ match }) => {
       <div>Ram:</div>
       <p>{phone.ram}</p>
     </div>
+
+
   )
 }
 
