@@ -86,4 +86,4 @@ const phones = [
 
 
 ]
-module.exports = phones
+export default phones
