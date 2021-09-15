@@ -12,7 +12,7 @@ const App = () => {
       <>
         <Header />
         <Route path="/" component={HomeScreen} exact />
-        <Route path="/phone/:id" component={PhoneScreen} />
+        <Route path="/phones/:id" component={PhoneScreen} />
         <Footer />
       </>
     </Router>

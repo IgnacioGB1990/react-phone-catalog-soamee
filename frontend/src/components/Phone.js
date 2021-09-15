@@ -5,7 +5,7 @@ import "../styles/Phone.css"
 const Phone = ({ phone }) => {
   return (
     <div>
-      <Link className="removeLink" to={`/phone/${phone._id}`} >
+      <Link className="removeLink" to={`/phones/${phone._id}`} >
         {phone.name}
       </Link>
     </div>
