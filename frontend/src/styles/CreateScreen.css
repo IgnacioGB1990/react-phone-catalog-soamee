@@ -1,0 +1,52 @@
+.createPhoneContainer{
+  text-align: center;
+  width:50%;
+  margin: auto;
+}
+
+.formCreatePhone{
+  display: flex;
+  flex-direction: column;
+  width:80%;
+  margin: auto;
+}
+
+.createHeader{
+  color:#6c46a7;
+  font-weight: bold;
+  font-size:18px;
+  margin-top:3%;
+}
+
+.formCreatePhone>input{
+padding:4px;
+border-style: none;
+border-bottom:1px solid grey;
+height:40px;
+}
+
+input:focus {
+  outline:0;
+}
+
+button{
+  border-style: none;
+  margin-top:4%;
+  height:40px;
+  background-color: white;
+  border:1px solid black;
+}
+
+button:hover{
+background-color: grey;
+border:none;
+}
+
+.buttonText{
+color: black; 
+font-size: 16px;
+}
+
+.buttonText:hover{
+  color: white; 
+  }

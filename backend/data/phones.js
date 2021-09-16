@@ -1,81 +1,60 @@
 const phones = [
   {
-    name: 'iphone 7',
+    name: 'iPhone 13',
     manufacturer: "Apple",
-    description: "Greates iphone ever",
+    description: "Last iPhone released. More of everything.",
     color: "Grey",
-    price: 192,
+    price: 1099,
     imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
+    screen: "6,1 inch OLED",
+    processor: "A15 Bionic ",
+    ram: 12
   },
   {
-    name: 'iphone 7',
-    manufacturer: "Apple",
-    description: "Greates iphone ever",
-    color: "Grey",
-    price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
+    name: 'Samsung',
+    manufacturer: "Galaxy",
+    description: "Samsung's flagship cellphone.",
+    color: "Blue Sky",
+    price: 499,
+    imageFileName: "/images/samsung.png",
+    screen: "6,1 inch IPS",
+    processor: "Titan M",
+    ram: 8
   },
   {
-    name: 'iphone 7',
-    manufacturer: "Apple",
-    description: "Greates iphone ever",
+    name: '3320',
+    manufacturer: "Nokia",
+    description: "Most robust cellphone ever made. Drop it, splash it or hammer it. It will survive anything.",
     color: "Grey",
     price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
+    imageFileName: "/images/nokia.png",
+    screen: "2,2 inch",
+    processor: "Old School",
+    ram: 1
   },
   {
-    name: 'iphone 7',
-    manufacturer: "Apple",
-    description: "Greates iphone ever",
+    name: 'P30 Lite',
+    manufacturer: "Huawei",
+    description: "Store your best memories",
     color: "Grey",
     price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
+    imageFileName: "/images/huawei.png",
+    screen: "5,2 inch OLED",
+    processor: "SPEEDY BOOSTER",
+    ram: 5
   },
   {
-    name: 'iphone 7',
-    manufacturer: "Apple",
+    name: 'Pixel 4 XL',
+    manufacturer: "Google",
     description: "Greates iphone ever",
     color: "Grey",
     price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
-  },
-  {
-    name: 'iphone 7',
-    manufacturer: "Apple",
-    description: "Greates iphone ever",
-    color: "Grey",
-    price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
-  },
-  {
-    name: 'iphone 7',
-    manufacturer: "Apple",
-    description: "Greates iphone ever",
-    color: "Grey",
-    price: 192,
-    imageFileName: "/images/iphone.png",
-    screen: "4,7 inch IPS",
-    processor: "A10 FUSION ",
-    ram: 2
-  },
+    imageFileName: "/images/pixel.png",
+    screen: "5 inch touch screen",
+    processor: "Android 7.1",
+    ram: 8
+  }
+
 
 
 ]

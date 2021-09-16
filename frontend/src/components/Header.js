@@ -9,6 +9,9 @@ const Header = () => {
       <Link className="homeLogoContainer" to="/">
         <i className="fas fa-home"></i>
       </Link>
+      <Link className="createLogoContainer" to="/create">
+        <i className="fas fa-plus-circle"></i>
+      </Link>
 
     </div>
   )

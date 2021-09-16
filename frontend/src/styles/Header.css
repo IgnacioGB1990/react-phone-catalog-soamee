@@ -12,8 +12,12 @@
   margin-left:47.5%;
 }
 
-.fas.fa-home:hover{
+.fas.fa-plus-circle{
+  font-size:22px;
+  color:grey;
+}
+
+.fas.fa-home:hover,.fas.fa-plus-circle:hover{
   color:black;
   cursor:pointer;
-  transform: scale(1.1);
 }
