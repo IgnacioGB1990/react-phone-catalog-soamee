@@ -19,20 +19,35 @@ const HomeScreen = () => {
     fetchPhones()
   }, [])
 
-  console.log(phones)
-  return (<div>
+  const deletePhone = (phone) => {
 
+    const newArrayOfPhones = phones.filter(p => p._id !== phone._id);
+    setPhones(newArrayOfPhones)
+    axios.delete(`/api/phones/${phone._id}`)
+  }
 
-    { loading && <Loader />}
-    {!loading && <div className="homeSectionContainer">
-      {phones.map((phone, index) => (
-        <li className="phoneList" key={index}>
-          <Phone phone={phone} />
+  return (
+    <>
+      {loading ? <Loader /> : phones.length === 0 ? <div className="noPhonesHeader">No phones on catalog<i class="fas fa-sad-tear"></i></div>
+        :
+        <>
+          <div className="homeSectionContainer">
+            <div className="headerPhoneCatalog">Phone Catalog</div>
+            {phones.map((phone, index) => (
+              <li className="phoneList" key={index}>
 
-        </li>
-      ))}
-    </div>}
-  </div>
+                <img className="imageSizeHome" src={phone.imageFileName} alt={phone.name} />
+
+                <Phone phone={phone} />
+
+                <i onClick={() => deletePhone(phone)} className="fas fa-trash" />
+
+              </li>
+            ))}
+          </div>
+        </>
+      }
+    </>
   )
 }
 

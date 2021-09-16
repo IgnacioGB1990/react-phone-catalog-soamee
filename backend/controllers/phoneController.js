@@ -33,10 +33,6 @@ const getPhoneById = asyncHandler(async (req, res) => {
 const createPhone = asyncHandler(async (req, res) => {
 
   const { name, manufacturer, description, color, price, imageFileName, screen, processor, ram } = req.body
-
-  // res.send({ name, manufacturer, description, color, price, imageFileName, screen, processor, ram })
-
-
   const phoneExists = await Phone.findOne({ name })
 
   if (phoneExists) {
@@ -67,4 +63,49 @@ const createPhone = asyncHandler(async (req, res) => {
   }
 })
 
-export { getPhones, getPhoneById, createPhone }
+// @desc Delete a phone
+// @route DELETE /api/products/:id
+// @access Public
+const deletePhone = asyncHandler(async (req, res) => {
+  const phone = await Phone.findById(req.params.id)
+  if (phone) {
+    await phone.remove()
+    res.json({ message: "Phone removed" })
+  } else {
+    res.status(404)
+    throw new Error("Phone not found")
+  }
+})
+
+
+// @desc Update a phone
+// @route PUT /api/products/:id
+// @access Public
+const updatePhone = asyncHandler(async (req, res) => {
+
+  const { name, manufacturer, description, color, price, imageFileName, screen, processor, ram } = req.body
+
+  const phone = await Phone.findById(req.params.id)
+
+  if (phone) {
+    phone.name = name,
+      phone.manufacturer = manufacturer,
+      phone.description = description,
+      phone.color = color,
+      phone.price = price,
+      phone.imageFileName = imageFileName,
+      phone.screen = screen,
+      phone.processor = processor,
+      phone.ram = ram
+
+    const updatedPhone = await phone.save()
+    res.json(updatedPhone)
+
+  } else {
+    res.status(404)
+    throw new Error("Phone not found")
+  }
+
+})
+
+export { getPhones, getPhoneById, createPhone, deletePhone, updatePhone }

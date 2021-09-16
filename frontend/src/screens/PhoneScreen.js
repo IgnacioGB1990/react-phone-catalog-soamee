@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
+import { Link } from "react-router-dom"
 import Loader from "../components/Loader"
 import "../styles/PhoneScreen.css"
 
@@ -21,11 +22,7 @@ const PhoneScreen = ({ match }) => {
     <>
       { loading && <Loader />}
       <div className="phoneScreenContainer">
-
-        <img src={phone.imageFileName} alt={phone.name} />
-
-
-
+        <img className="imageSizePhoneScreen" src={phone.imageFileName} alt={phone.name} />
         <div >Name:</div>
         <p>{phone.name}</p>
         <div>Manufacturer:</div>
@@ -42,6 +39,9 @@ const PhoneScreen = ({ match }) => {
         <p>{phone.processor}</p>
         <div>Ram:</div>
         <p>{phone.ram}</p>
+        <Link className="removeLink" to={`/phones/update/${phone._id}`} >
+          update Phone
+        </Link>
       </div>
 
     </>

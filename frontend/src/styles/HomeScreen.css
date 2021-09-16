@@ -1,8 +1,72 @@
 .homeSectionContainer{
-  text-align: center;
+
 }
 
+.headerPhoneCatalog{
+  color:#6c46a7;
+  font-weight: bold;
+  font-size:18px;
+  margin-top:1%;
+  text-align: center;
+  border-bottom: 1px solid grey;
+  width:40%;
+  margin:auto;
+}
+.noPhonesHeader{
+  text-align: center;
+  margin:auto;
+  margin-top:5%;
+  font-size:25px;
+  display:flex;
+  flex-direction:column;
+  color:#6c46a7;
+  font-weight: bold;
+}
+
+.fas.fa-sad-tear{
+font-size: 60px;
+color:#6c46a7;
+margin-top:5%;
+}
+
+.headerHomeScreen{
+  color:#6c46a7;
+  font-weight: bold;
+  font-size:18px;
+  margin-top:1%;
+}
 .phoneList{
   list-style-type: none;
-  padding:15px;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  width:40%;
+  padding:5px;
+  margin:auto;
+}
+
+.imageSizeHome{
+  width:80px;
+  height:100px;
+}
+
+
+
+.fas.fa-trash{
+  padding-top:35px;
+  font-size:20px;
+}
+
+.fas.fa-trash:hover{
+  cursor:pointer;
+  color:black;
+}
+
+
+@media screen and (max-width:1000px){
+  .phoneList{
+    width:90%;
+  }
+
 }

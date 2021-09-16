@@ -42,11 +42,25 @@ background-color: grey;
 border:none;
 }
 
+button:hover>.buttonText{
+  background-color: grey;
+  border:none;
+  color: white; 
+  }
+
 .buttonText{
 color: black; 
 font-size: 16px;
 }
 
-.buttonText:hover{
-  color: white; 
+
+
+
+  @media screen and (max-width:1000px){
+    .createPhoneContainer{
+      text-align: center;
+      width:90%;
+      margin: auto;
+    }
+  
   }
