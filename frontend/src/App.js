@@ -17,6 +17,7 @@ const App = () => {
         <Route path="/phones/:id" component={PhoneScreen} exact />
         <Route path="/create" component={CreateScreen} />
         <Route path="/phones/update/:id" component={UpdateScreen} exact />
+
         {/* <Footer /> */}
       </>
     </Router>

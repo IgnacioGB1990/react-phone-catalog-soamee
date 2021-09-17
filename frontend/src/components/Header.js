@@ -10,9 +10,8 @@ const Header = () => {
         <i className="fas fa-home"></i>
       </Link>
       <Link className="createLogoContainer" to="/create">
-        <i class="fas fa-folder-plus"></i>
+        <i className="fas fa-folder-plus"></i>
       </Link>
-
     </div>
   )
 }

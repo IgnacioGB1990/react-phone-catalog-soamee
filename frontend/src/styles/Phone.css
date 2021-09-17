@@ -1,20 +1,31 @@
 .phoneComponentContainer{
-  padding-top:30px;
-  width:30%;
+  padding-top:5px;
+  width:200px;
+  height:80px;
+  border:1px solid grey;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
 }
 
+.phoneComponentContainer:hover{
+  background-color:grey;
+}
+
+.phoneComponentContainer:hover>p{
+ color:white;
+}
+p{
+  font-size:18px;
+}
 
 .removeLink{
   text-decoration: none !important;
   color:rgba(0, 0, 0, 0.575);
-  font-size: 18px;
-  font-weight: bold;
-  
+  font-size: 12px;
+  font-weight: bold;  
 }
 
 .removeLink:hover{
  color:black;
- transform: scale(1.3);
 }

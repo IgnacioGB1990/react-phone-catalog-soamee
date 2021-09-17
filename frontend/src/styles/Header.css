@@ -5,14 +5,10 @@
 }
 
 .fas.fa-home{
-  font-size:22px;
-  color:grey;
-  text-align: center;
-  padding: 15px;
-  margin-left:47.5%;
+  margin-left:45%;
 }
 
-.fas.fa-folder-plus{
+.fas.fa-home,.fas.fa-folder-plus{
   padding: 15px;
   font-size:22px;
   color:grey;
@@ -21,4 +17,11 @@
 .fas.fa-home:hover,.fas.fa-folder-plus:hover{
   color:black;
   cursor:pointer;
+}
+
+@media screen and (max-width:1000px){
+  .fas.fa-home{
+    margin-left:38%;
+  }
+
 }

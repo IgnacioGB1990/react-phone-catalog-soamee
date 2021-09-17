@@ -109,7 +109,7 @@ const UpdateScreen = ({ match }) => {
               <input type="text" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
               <input type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
               <Form.Group controlId="image">
-                <Form.File id="image-file" label="Choose File ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
+                <Form.File id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
                 {uploading && <Loader />}
               </Form.Group>
               <button type="submit" ><div className="buttonText">Update Phone</div></button>

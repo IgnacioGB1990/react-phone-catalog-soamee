@@ -86,7 +86,7 @@ const CreateScreen = () => {
         <input type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
 
         <Form.Group controlId="image">
-          <Form.File id="image-file" label="Choose File ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
+          <Form.File id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
           {uploading && <Loader />}
         </Form.Group>
 
