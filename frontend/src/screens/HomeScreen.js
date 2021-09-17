@@ -26,6 +26,8 @@ const HomeScreen = () => {
     axios.delete(`/api/phones/${phone._id}`)
   }
 
+
+
   return (
     <>
       {loading ? <Loader /> : phones.length === 0 ? <div className="noPhonesHeader">No phones on catalog<i class="fas fa-sad-tear"></i></div>
@@ -37,6 +39,7 @@ const HomeScreen = () => {
               <li className="phoneList" key={index}>
 
                 <img className="imageSizeHome" src={phone.imageFileName} alt={phone.name} />
+
 
                 <Phone phone={phone} />
 

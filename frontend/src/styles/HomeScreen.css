@@ -1,5 +1,6 @@
 .homeSectionContainer{
-
+  margin-top:1.5%;
+  padding-bottom:5%;
 }
 
 .headerPhoneCatalog{
@@ -8,7 +9,7 @@
   font-size:18px;
   margin-top:1%;
   text-align: center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.322);
   width:40%;
   margin:auto;
 }
@@ -56,6 +57,7 @@ margin-top:5%;
 .fas.fa-trash{
   padding-top:35px;
   font-size:20px;
+  color:rgb(134, 133, 133);
 }
 
 .fas.fa-trash:hover{
@@ -67,6 +69,10 @@ margin-top:5%;
 @media screen and (max-width:1000px){
   .phoneList{
     width:90%;
+  }
+
+  .headerPhoneCatalog{
+width:90%;
   }
 
 }

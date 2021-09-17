@@ -1,7 +1,9 @@
+import path from "path"
 import express from "express"
 import dotenv from "dotenv"
 import connectDB from "./config/db.js"
 import phoneRoutes from "./routes/phoneRoutes.js"
+import uploadRoutes from "./routes/uploadRoutes.js"
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js"
 
 dotenv.config()
@@ -17,6 +19,10 @@ app.get("/", (req, res) => {
 })
 
 app.use("/api/phones", phoneRoutes)
+app.use("/api/upload", uploadRoutes)
+
+const __dirname = path.resolve()
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")))
 
 app.use(notFound)
 app.use(errorHandler)

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
+import { Form } from "react-bootstrap"
 import Loader from "../components/Loader"
+import "../styles/UpdateScreen.css"
 
 
 
@@ -20,6 +22,8 @@ const UpdateScreen = ({ match }) => {
 
   const [phoneToUpdate, setPhoneToUpdate] = useState("")
   const [loading, setLoading] = useState("")
+  const [phoneUpdated, setPhoneUpdated] = useState(false)
+  const [uploading, setUploading] = useState(false)
 
   const data = {
     name: name,
@@ -27,25 +31,26 @@ const UpdateScreen = ({ match }) => {
     description: description,
     color: color,
     price: price,
-    imageFileName: "/images/iphone.png",
+    imageFileName: imageFileName,
     screen: screen,
     processor: processor,
     ram: ram
   }
 
   useEffect(() => {
-    const fetchPhone = async () => {
-      const { data } = await axios.get(`/api/phones/${match.params.id}`)
-      setPhoneToUpdate(data)
-      setLoading(false)
-    }
     fetchPhone()
-  }, [match])
+  })
+
+  const fetchPhone = async () => {
+    const { data } = await axios.get(`/api/phones/${match.params.id}`)
+    setPhoneToUpdate(data)
+    setLoading(false)
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(data)
     axios.put(`/api/phones/${match.params.id}`, data)
+    fetchPhone()
 
     setName(e.target.reset())
     setManufacturer(e.target.reset())
@@ -55,7 +60,36 @@ const UpdateScreen = ({ match }) => {
     setScreen(e.target.reset())
     setProcessor(e.target.reset())
     setRam(e.target.reset())
+
+    setPhoneUpdated(true)
+
   }
+
+
+  const uploadFileHandler = async (e) => {
+    const file = e.target.files[0]
+    const formData = new FormData()
+    formData.append("image", file)
+    setUploading(true)
+
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      }
+      const { data } = await axios.post("/api/upload", formData, config)
+
+      setImageFileName(data)
+      setUploading(false)
+    } catch (error) {
+      console.log(error)
+      setUploading(false)
+
+
+    }
+  }
+
 
   return (
     <>
@@ -63,18 +97,21 @@ const UpdateScreen = ({ match }) => {
         <>
           <div className="createPhoneContainer">
             <form className="formCreatePhone" onSubmit={submitHandler}>
-              <div className="createHeader">Editing Phone</div>
+              {phoneUpdated ? <div className="createdMessageHeader">Phone Updated !!!</div> : <div className="updateHeader">Update Phone</div>}
               <div>{phoneToUpdate.name}</div>
               <div>{phoneToUpdate.manufacturer}</div>
               <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
               <input type="text" placeholder="Manufacturer" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)} />
               <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
               <input type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
-              <input type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
-              <input type="text" placeholder="Image" value={imageFileName} onChange={(e) => setImageFileName(e.target.value)} />
               <input type="text" placeholder="Screen" value={screen} onChange={(e) => setScreen(e.target.value)} />
               <input type="text" placeholder="Processor" value={processor} onChange={(e) => setProcessor(e.target.value)} />
               <input type="text" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
+              <input type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+              <Form.Group controlId="image">
+                <Form.File id="image-file" label="Choose File ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
+                {uploading && <Loader />}
+              </Form.Group>
               <button type="submit" ><div className="buttonText">Update Phone</div></button>
             </form>
           </div>

@@ -16,4 +16,5 @@
 
 .removeLink:hover{
  color:black;
+ transform: scale(1.3);
 }

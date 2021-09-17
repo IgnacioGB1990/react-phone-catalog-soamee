@@ -12,12 +12,13 @@
   margin-left:47.5%;
 }
 
-.fas.fa-plus-circle{
+.fas.fa-folder-plus{
+  padding: 15px;
   font-size:22px;
   color:grey;
 }
 
-.fas.fa-home:hover,.fas.fa-plus-circle:hover{
+.fas.fa-home:hover,.fas.fa-folder-plus:hover{
   color:black;
   cursor:pointer;
 }
