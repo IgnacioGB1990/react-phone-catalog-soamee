@@ -23,3 +23,12 @@
   font-size:16px;
   
 }
+
+@media screen and (max-width:1000px){
+ 
+  .buttonText{
+    margin-bottom:30%;
+    }
+    
+
+}
