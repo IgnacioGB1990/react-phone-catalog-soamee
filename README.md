@@ -2,7 +2,7 @@
 Created a REACT APP with CRUD capabilities where we can interact with a list of phones.
 
 ## Clone project
-git clone -b master https://github.com/IgnacioGB1990/react-phone-catalog-soamee.git
+git clone https://github.com/IgnacioGB1990/react-phone-catalog-soamee.git
 
 ## App Deployed on Heroku
 React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
