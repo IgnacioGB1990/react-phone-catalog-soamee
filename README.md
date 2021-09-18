@@ -6,23 +6,23 @@ React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
 
 ## Phone Model
 
- id:
+ id:0,
  
- name:
+ name:"iPhone 13",
  
- manufacturer:
+ manufacturer:"Apple",
  
- description:
+ description:"Fastest phone on the market",
  
- color:
+ color:"black",
  
- price:
+ price:899,
  
- imageFileName:
+ imageFileName:"iphone13.png",
  
- screen:
+ screen:"6,2 inch IPS",
  
- processor:
+ processor: "A15 Bionic",
  
- ram:
+ ram:8
 
