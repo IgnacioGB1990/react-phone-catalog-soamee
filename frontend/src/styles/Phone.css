@@ -34,3 +34,20 @@ p{
 .removeLink:hover{
  color:black;
 }
+
+@media screen and (max-width:1000px){
+
+  .phoneComponentContainer{
+    padding-top:5px;
+    width:120px;
+  }
+
+  .phoneName{
+    font-size:18px;
+    color:rgba(0, 0, 0, 0.699);
+  }
+  p{
+    font-size:14px;
+  }
+
+}

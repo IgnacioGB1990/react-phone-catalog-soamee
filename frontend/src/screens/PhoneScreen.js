@@ -20,9 +20,6 @@ const PhoneScreen = ({ match }) => {
     fetchPhone()
   }, [match, phone.imageFileName])
 
-  console.log("this is the phone", phone.imageFileName)
-  console.log("this is image", image)
-
 
   return (
     <>

@@ -61,15 +61,21 @@ width:50%;
 @media screen and (max-width:1000px){
   .phoneScreenContainer{
     width:100%;
-  border:none;
+    border:none;
     flex-direction: column;
-  
   }
 
   .rightContainerPhoneScreen{
     width:100%;
+    border:1px solid red;
   }
 
+  .imageSizePhoneScreen{
+    text-align: center;
+    width:100%;
+    height:340px;
+   
+  }
 
   .updateHeaderPhoneScreen{
     border:1px solid grey;
