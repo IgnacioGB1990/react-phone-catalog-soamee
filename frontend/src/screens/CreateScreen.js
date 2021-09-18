@@ -16,6 +16,7 @@ const CreateScreen = () => {
   const [processor, setProcessor] = useState("")
   const [ram, setRam] = useState("")
   const [uploading, setUploading] = useState(false)
+  const [phoneUpdated, setPhoneUpdated] = useState(false)
 
   const data = {
     name: name,
@@ -70,23 +71,25 @@ const CreateScreen = () => {
     setScreen(e.target.reset())
     setProcessor(e.target.reset())
     setRam(e.target.reset())
+
+    setPhoneUpdated(true)
   }
 
   return (
     <div className="createPhoneContainer">
       <form className="formCreatePhone" onSubmit={submitHandler}>
-        <div className="createHeader">Create Phone</div>
-        <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="text" placeholder="Manufacturer" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)} />
-        <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
-        <input type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
-        <input type="text" placeholder="Screen" value={screen} onChange={(e) => setScreen(e.target.value)} />
-        <input type="text" placeholder="Processor" value={processor} onChange={(e) => setProcessor(e.target.value)} />
-        <input type="text" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
-        <input type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+        {phoneUpdated ? <div className="createdMessageHeader">Phone Created !!!</div> : <div className="createHeader">Create Phone</div>}
+        <input required type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+        <input required type="text" placeholder="Manufacturer" value={manufacturer} onChange={(e) => setManufacturer(e.target.value)} />
+        <input required type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input required type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
+        <input required type="text" placeholder="Screen" value={screen} onChange={(e) => setScreen(e.target.value)} />
+        <input required type="text" placeholder="Processor" value={processor} onChange={(e) => setProcessor(e.target.value)} />
+        <input required type="text" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
+        <input required type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
 
         <Form.Group controlId="image">
-          <Form.File id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
+          <Form.File required id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
           {uploading && <Loader />}
         </Form.Group>
 

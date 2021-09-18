@@ -6,12 +6,14 @@ import "../styles/Header.css"
 const Header = () => {
   return (
     <div className="headerContainer">
-      <Link className="homeLogoContainer" to="/">
-        <i className="fas fa-home"></i>
-      </Link>
-      <Link className="createLogoContainer" to="/create">
-        <i className="fas fa-folder-plus"></i>
-      </Link>
+      <div className="headerCenter">
+        <Link className="homeLogoContainer" to="/">
+          <i className="fas fa-home"></i>
+        </Link>
+        <Link className="createLogoContainer" to="/create">
+          <i className="fas fa-folder-plus"></i>
+        </Link>
+      </div>
     </div>
   )
 }

@@ -4,8 +4,8 @@
   border:1px solid lightgrey;
 }
 
-.fas.fa-home{
-  margin-left:45%;
+.headerCenter{
+  text-align: center;
 }
 
 .fas.fa-home,.fas.fa-folder-plus{
@@ -19,9 +19,3 @@
   cursor:pointer;
 }
 
-@media screen and (max-width:1000px){
-  .fas.fa-home{
-    margin-left:38%;
-  }
-
-}

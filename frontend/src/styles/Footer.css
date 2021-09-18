@@ -8,11 +8,24 @@
    color: black;
    background-color: #6c46a7;
    text-align: center;
-
  }
  
- .copyRight{
+ .footerText{
   padding:15px;
   font-weight: bold;
   color:white;
  }
+
+ .far.fa-smile-wink{
+  margin-left:1%;
+  font-weight: bold;
+  color:white;
+  font-size: 18px;
+ }
+
+ .linkToGitHub{
+  margin-left:1%;
+ font-weight: bold;
+ color:white;
+  border-bottom:1px solid white;
+}
