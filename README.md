@@ -4,7 +4,7 @@ Created a REACT APP with CRUD capabilities.
 ## App Deployed on Heroku
 React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
 
-### Phone Model
+## Phone Model
 
  id:
  
