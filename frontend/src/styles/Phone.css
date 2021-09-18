@@ -12,16 +12,21 @@
   background-color:grey;
 }
 
-.phoneComponentContainer:hover>p{
+.phoneComponentContainer:hover>p,.phoneComponentContainer:hover>.phoneName{
  color:white;
 }
+
+.phoneName{
+  font-size:22px;
+  color:rgba(0, 0, 0, 0.699);
+}
 p{
-  font-size:18px;
+  font-size:16px;
 }
 
 .removeLink{
   text-decoration: none !important;
-  color:rgba(0, 0, 0, 0.575);
+  color:grey;
   font-size: 12px;
   font-weight: bold;  
 }

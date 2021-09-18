@@ -8,6 +8,7 @@
   font-weight: bold;
   font-size:18px;
   margin-top:1%;
+  padding-bottom:1%;
   text-align: center;
   border-bottom: 1px solid rgba(128, 128, 128, 0.322);
   width:40%;
@@ -16,13 +17,15 @@
 
 .filterContainer{
   text-align: center;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.322);
   width:40%;
   margin:auto;
   padding-bottom:1%;
 }
 
-
+.allFilter{
+  color:black;
+  font-weight: bold;
+}
 
 
 .noPhonesHeader{
@@ -55,14 +58,18 @@ margin-top:5%;
   flex-direction: row;
   text-align: center;
   width:40%;
-  padding:5px;
+  padding:15px;
   margin:auto;
+  border:1px solid black;
+  border-radius:5px;
+  margin-bottom:1%;
 }
 
 .imageSizeHome{
   width:80px;
   height:100px;
 }
+
 
 
 
@@ -75,6 +82,7 @@ margin-top:5%;
 .fas.fa-trash:hover{
   cursor:pointer;
   color:black;
+  transform: scale(1.1);
 }
 
 

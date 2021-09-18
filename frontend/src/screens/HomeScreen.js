@@ -9,12 +9,16 @@ const HomeScreen = () => {
 
   const [phones, setPhones] = useState([])
   const [phonesToModify, setPhonesToModify] = useState([])
+  const [uniqueColors, setUniqueColors] = useState([])
+  const [uniqueManufacturer, setUniqueManufacturer] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchPhones = async () => {
       const { data } = await axios.get("/api/phones")
       setPhones(data)
+      setUniqueColorFunction(data)
+      setUniqueManufacturerFunction(data)
       setPhonesToModify(data)
       setLoading(false)
     }
@@ -22,10 +26,29 @@ const HomeScreen = () => {
     fetchPhones()
   }, [])
 
+
+  const setUniqueColorFunction = (phones) => {
+    phones.map((phone) => (
+      uniqueColors.push(phone.color)
+    ))
+    let uniquePhoneColor = [...new Set(uniqueColors)]
+    setUniqueColors(uniquePhoneColor)
+  }
+
+  const setUniqueManufacturerFunction = (phones) => {
+    phones.map((phone) => (
+      uniqueManufacturer.push(phone.manufacturer)
+    ))
+    let uniquePhoneManufacturer = [...new Set(uniqueManufacturer)]
+    setUniqueManufacturer(uniquePhoneManufacturer)
+  }
+
   const deletePhone = (phone) => {
     const newArrayOfPhones = phones.filter(p => p._id !== phone._id);
     setPhones(newArrayOfPhones)
     setPhonesToModify(newArrayOfPhones)
+    setUniqueColorFunction(newArrayOfPhones)
+    setUniqueManufacturerFunction(newArrayOfPhones)
     axios.delete(`/api/phones/${phone._id}`)
   }
 
@@ -34,13 +57,13 @@ const HomeScreen = () => {
   }
 
 
-  const filterManufacturer = (manufacturer) => {
+  const filterByManufacturer = (manufacturer) => {
     const filteredPhones = phones.filter(p => p.manufacturer === manufacturer);
     setPhonesToModify(filteredPhones)
   }
 
 
-  const filterColor = (color) => {
+  const filterByColor = (color) => {
     const filteredPhones = phones.filter(p => p.color === color);
     setPhonesToModify(filteredPhones)
   }
@@ -65,11 +88,11 @@ const HomeScreen = () => {
                     variant={variant.toLowerCase()}
                     title={variant}
                   >
-                    {phones.map((phone, index) => (
-                      <Dropdown.Item key={index} onClick={() => filterManufacturer(phone.manufacturer)} eventKey="1">{phone.manufacturer}</Dropdown.Item>
+                    {uniqueManufacturer.map((manufacturer, index) => (
+                      <Dropdown.Item key={index} onClick={() => filterByManufacturer(manufacturer)} eventKey="1">{manufacturer}</Dropdown.Item>
                     ))}
                     <Dropdown.Divider />
-                    <Dropdown.Item onClick={() => all()} >All</Dropdown.Item>
+                    <Dropdown.Item className="allFilter" onClick={() => all()} >All</Dropdown.Item>
                   </DropdownButton>
                 ),
               )}
@@ -83,10 +106,11 @@ const HomeScreen = () => {
                     variant={variant.toLowerCase()}
                     title={variant}
                   >
-                    {phones.map((phone, index) => (
-                      <Dropdown.Item key={index} onClick={() => filterColor(phone.color)} eventKey="2">{phone.color}</Dropdown.Item>
+                    {uniqueColors.map((color, index) => (
+                      <Dropdown.Item key={index} onClick={() => filterByColor(color)} eventKey="2">{color}</Dropdown.Item>
                     ))}
-                    <Dropdown.Item onClick={() => all()} >All</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item className="allFilter" onClick={() => all()} >All</Dropdown.Item>
                   </DropdownButton>
                 ),
               )}
@@ -98,14 +122,9 @@ const HomeScreen = () => {
 
             {phonesToModify.map((phone, index) => (
               <li className="phoneList" key={index}>
-
                 <img className="imageSizeHome" src={phone.imageFileName} alt={phone.name} />
-
-
                 <Phone phone={phone} />
-
                 <i onClick={() => deletePhone(phone)} className="fas fa-trash" />
-
               </li>
             ))}
           </div>

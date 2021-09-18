@@ -6,7 +6,7 @@ const Phone = ({ phone }) => {
   return (
     <Link className="removeLink" to={`/phones/${phone._id}`} >
       <div className="phoneComponentContainer">
-        <p>{phone.name}</p>
+        <div className="phoneName">{phone.name}</div>
         <p>{phone.manufacturer}</p>
       </div>
     </Link >

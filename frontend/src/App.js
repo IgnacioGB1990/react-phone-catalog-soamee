@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/create" component={CreateScreen} />
         <Route path="/phones/update/:id" component={UpdateScreen} exact />
 
-        {/* <Footer /> */}
+        <Footer />
       </>
     </Router>
   );
