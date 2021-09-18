@@ -7,13 +7,22 @@ React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
 ### Phone Model
 
  id:
+ 
  name:
+ 
  manufacturer:
+ 
  description:
+ 
  color:
+ 
  price:
+ 
  imageFileName:
+ 
  screen:
+ 
  processor:
+ 
  ram:
 
