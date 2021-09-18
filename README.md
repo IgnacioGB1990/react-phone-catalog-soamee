@@ -1,8 +1,5 @@
 # Soame Full-stack Code Test: React Phone Catalog
-Created a REACT APP with CRUD capabilities.
-
-## App Deployed on Heroku
-React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
+Created a REACT APP with CRUD capabilities where we can interact with a list of phones.
 
 ## Phone Model
 
@@ -25,4 +22,9 @@ React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
  processor: "A15 Bionic",
  
  ram:8
+
+
+## App Deployed on Heroku
+React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
+
 
