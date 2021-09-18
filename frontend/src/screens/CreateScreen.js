@@ -85,8 +85,8 @@ const CreateScreen = () => {
         <input required type="text" placeholder="Color" value={color} onChange={(e) => setColor(e.target.value)} />
         <input required type="text" placeholder="Screen" value={screen} onChange={(e) => setScreen(e.target.value)} />
         <input required type="text" placeholder="Processor" value={processor} onChange={(e) => setProcessor(e.target.value)} />
-        <input required type="text" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
-        <input required type="text" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+        <input required type="number" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
+        <input required type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
 
         <Form.Group controlId="image">
           <Form.File required id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
