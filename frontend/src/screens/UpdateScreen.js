@@ -104,7 +104,7 @@ const UpdateScreen = ({ match }) => {
                 <Form.File required id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
                 {uploading && <Loader />}
               </Form.Group>
-              <button type="submit" ><div className="buttonText">Update Phone</div></button>
+              <button className="updatePhoneButton" type="submit" ><div >Update Phone</div></button>
             </form>
           </div>
         </>

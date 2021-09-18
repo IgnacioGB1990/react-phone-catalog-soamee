@@ -21,12 +21,15 @@
 
 .phoneToUpdateManufacturer{
   font-size:16px;
-  
 }
+
+.updatePhoneButton{
+  margin-bottom:30%;
+  }
 
 @media screen and (max-width:1000px){
  
-  .buttonText{
+  .updatePhoneButton{
     margin-bottom:30%;
     }
     
