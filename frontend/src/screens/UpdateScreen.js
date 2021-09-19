@@ -100,10 +100,18 @@ const UpdateScreen = ({ match }) => {
               <input required type="text" placeholder="Processor" value={processor} onChange={(e) => setProcessor(e.target.value)} />
               <input required type="number" placeholder="Ram" value={ram} onChange={(e) => setRam(e.target.value)} />
               <input required type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+
               <Form.Group controlId="image">
-                <Form.File required id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
-                {uploading && <Loader />}
+                <Form.Control
+                  type="text"
+                  placeholder="Enter image url"
+                  value={imageFileName}
+                  onChange={(e) => setImageFileName(e.target.value)}
+                ></Form.Control>
+                {/* <Form.File required id="image-file" label="Upload file ( jpg, jpeg or png )" custom onChange={uploadFileHandler}></Form.File>
+                {uploading && <Loader />} */}
               </Form.Group>
+
               <button className="updatePhoneButton" type="submit" ><div >Update Phone</div></button>
             </form>
           </div>
