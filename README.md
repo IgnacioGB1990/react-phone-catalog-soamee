@@ -10,7 +10,7 @@ Public RESTful API deployed on Heroku: https://apisoameephonecatalog.herokuapp.c
 
 (i.e. get phones: https://apisoameephonecatalog.herokuapp.com/api/phones)
 
-(i.e. get phone by Id: https://apisoameephonecatalog.herokuapp.com/api/phones/614607364e797354617c09c6 )
+(i.e. get phone by id: https://apisoameephonecatalog.herokuapp.com/api/phones/614607364e797354617c09c6 )
 
 
 
