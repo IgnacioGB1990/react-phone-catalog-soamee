@@ -3,7 +3,7 @@ Created a REACT APP with CRUD capabilities where the user can interact with a li
 
 <img width="577" alt="saaaaa" src="https://user-images.githubusercontent.com/55360078/133898643-10b67c50-fa14-473a-9954-87c965a3d145.png">
 
-## App Deployed on Heroku
+## REACT APP and REST API deployed on Heroku
 React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
 
 Public RESTful API deployed on Heroku: https://apisoameephonecatalog.herokuapp.com/api
