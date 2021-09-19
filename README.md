@@ -5,6 +5,11 @@ Created a REACT APP with CRUD capabilities where the user can interact with a li
 
 ## App Deployed on Heroku
 React App deployed on heroku: https://soameephonecatalog.herokuapp.com/
+Public RESTful API deployed on Heroku: https://apisoameephonecatalog.herokuapp.com/api
+(i.e. get phones: https://apisoameephonecatalog.herokuapp.com/api/phones)
+(i.e. get phone by Id: https://apisoameephonecatalog.herokuapp.com/api/phones/614607364e797354617c09c6 )
+
+
 
 ## Phone Model
 
