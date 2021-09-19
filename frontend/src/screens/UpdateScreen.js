@@ -103,8 +103,9 @@ const UpdateScreen = ({ match }) => {
 
               <Form.Group controlId="image">
                 <Form.Control
+                  required
                   type="text"
-                  placeholder="Enter image url"
+                  placeholder="Image url (i.e. https://picsum.photos/)"
                   value={imageFileName}
                   onChange={(e) => setImageFileName(e.target.value)}
                 ></Form.Control>
